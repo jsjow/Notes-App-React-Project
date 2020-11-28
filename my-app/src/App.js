@@ -27,13 +27,14 @@ class App extends React.Component {
 
   changeCurrentNote = (updatedNote) => {
     this.state.notes.map((note) => {
-      if (note.key == updatedNote.userNoteKey) {
-        note.userNoteDate = updatedNote.userNoteDate;
-        note.userNoteText = updatedNote.userNoteText;
-        note.userNoteTitle = updatedNote.userNoteTitle;
+      if (note.key === updatedNote.userNoteKey) {
+        return (note.userNoteDate = updatedNote.userNoteDate,
+        note.userNoteText = updatedNote.userNoteText,
+        note.userNoteTitle = updatedNote.userNoteTitle
+        )
       }
       else {
-        console.log('no');
+        ;
       }
     });
   }
@@ -54,7 +55,7 @@ class App extends React.Component {
           'Your note has been deleted.',
           'success'
         )
-        const filteredNoteArray = this.state.notes.filter((item) => { return (item.key != singleNote) });
+        const filteredNoteArray = this.state.notes.filter((item) => { return (item.key !== singleNote) });
         this.setState({ notes: filteredNoteArray });
       } else if (
         /* Read more about handling dismissals below */

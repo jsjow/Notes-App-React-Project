@@ -18,7 +18,7 @@ class MyInputField extends React.Component {
     }
 
     onButtonClick = (event) => {
-        if (this.state.noteDisplayText == "") {
+        if (this.state.noteDisplayText === "") {
             ;
         }
         else {
