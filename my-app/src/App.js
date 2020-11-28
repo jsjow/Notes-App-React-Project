@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   changeCurrentNote = (updatedNote) => {
-    this.state.notes.map((note) => {
+    this.state.notes.forEach((note) => {
       if (note.key === updatedNote.userNoteKey) {
         return (note.userNoteDate = updatedNote.userNoteDate,
         note.userNoteText = updatedNote.userNoteText,
