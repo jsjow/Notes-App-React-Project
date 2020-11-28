@@ -58,7 +58,7 @@ class LittleNote extends React.Component {
                             <CardColumns>
                                 {this.props.notes.map((note) => {
                                     return (
-                                        <div>
+                                        <div key={note.key}>
                                             <Card onClick={() => this.mySatesFunc(note.userNoteTitle, note.userNoteDate, note.userNoteText, note.key)}>
                                                 <Button className="mr-2 block" color="danger mt-2 x-size" onClick={() => { this.props.deleteIt(note.key) }}>x</Button>
                                                 <CardBody onClick={() => this.setState({ modalIsOpen: true })} className="border-success mr-2 mb-2 cards">
